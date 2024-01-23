@@ -1,0 +1,29 @@
+---
+import '@fontsource/outfit/400.css'
+import '@fontsource/outfit/600.css'
+import '@fontsource/outfit/700.css'
+import '@fontsource/young-serif'
+
+type Props = {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Recipe page' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/png' href='/images/favicon-32x32.png' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body
+    class='antialised bg-main text-body font-body absolute w-full h-full grid place-items-center'
+  >
+    <slot />
+  </body>
+</html>
